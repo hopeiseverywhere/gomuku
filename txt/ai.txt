@@ -1,0 +1,34 @@
+1. Did you attempt to make your computer player very smart -- 
+i.e., do something more clever than just pick a random legal move?
+- Yes
+
+2. If so, were you able to accomplish this? 
+Is your computer player as smart as you would like?
+- It is pretty smart
+
+
+3. How did you determine which piece to play next? 
+Tell us about your “pick next move” algorithm
+- I use DFS to generate a list of all consecutive paths, which are then sorted in descending order by path length. 
+    The computer will initially examine all of the player's paths. 
+    If the player has a path longer than 3, the computer will then 
+    check both ends of that path. Once both ends are valid (i.e. empty space), 
+    the computer will place a stone or chess piece at one end which if further from the edge.
+
+- If no such path exists on the player's side, 
+    the computer will place a stone or chess piece 
+    at the first (and longest) valid path on the computer's side.
+    Which the same process of checking both ends and which side is further form the edge.
+
+4. How often did your computer program beat you, or your friends, or whoever tested it out for you?
+- Computer tend to beat me more when the board is relative full, but not vice versa.
+
+5. How easy would it be to make the difficulty level adjustable?
+- Currently, the computer checks whether player has 3 or more stones in a row, I guess we can tune this parameter.
+    Also, the DFS prioritizes horizontal paths, I can change the priority to diagonal paths to make it more difficult.
+
+6. How would you improve it in the future?
+- Currently, the computer only checks for consecutive stones or chess pieces, 
+    not for tricky placements like '1101' or '11011'
+    (where '1' represents a stone and '0' represents an empty space). 
+    I could improve this aspect.
